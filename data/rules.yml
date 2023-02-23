@@ -1,0 +1,40 @@
+version: "2.0"
+
+rules:
+
+- rule: Say goodbye anytime the user says goodbye
+  steps:
+  - intent: goodbye
+  - action: utter_come_back_by_second_path
+  - action: action_restart
+
+- rule: Say goodbyee anytime the user says goodbye
+  steps:
+  - intent: okey
+  - action: utter_come_back_by_second_path
+  - action: action_restart
+
+- rule: Say welcome anytime the user says thanks
+  steps:
+  - intent: thanks
+  - action: utter_welcome
+  - action: action_restart
+
+
+
+- rule: Say 'I am a bot' anytime the user challenges
+  steps:
+  - intent: bot_challenge
+  - action: utter_iamabot
+  - action: action_restart
+
+- rule: Say 'WeightBot' anytime the user ask name
+  steps:
+  - intent: tell_name
+  - action: utter_name
+  - action: action_restart
+
+- rule: out-of-scope
+  steps:
+  - intent: nlu_fallback
+  - action: utter_out_of_scope

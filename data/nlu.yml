@@ -1,0 +1,371 @@
+version: "2.0"
+
+nlu:
+- intent: greet_en
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - hey there
+    - let's go
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
+
+
+- intent: goodbye
+  examples: |
+    - good afternoon
+    - cu
+    - good by
+    - cee you later
+    - good night
+    - bye
+    - goodbye
+    - have a nice day
+    - see you around
+    - bye bye
+    - see you later
+
+- intent: okey
+  examples: |
+    - ok
+    - okey
+    - okay
+    - oki
+
+- intent: affirm_en
+  examples: |
+    - yes
+    - indeed
+    - of course
+    - that sounds good
+    - correct
+    - exactely
+    - yep
+    - yeah
+    - that's right
+    - ok
+    - great
+    - right
+    - great choice
+    - sounds really good
+    - sure
+
+
+- intent: deny
+  examples: |
+    - no
+    - n
+    - never
+    - I don't think so
+    - don't like that
+    - no way
+    - not really
+
+
+
+- intent: mood_great
+  examples: |
+    - perfect
+    - great
+    - amazing
+    - feeling like a king
+    - wonderful
+    - I am feeling very good
+    - I am great
+    - I am amazing
+    - I am going to save the world
+    - super stoked
+    - extremely good
+    - so so perfect
+    - so good
+    - so perfect
+
+- intent: mood_unhappy
+  examples: |
+    - my day was horrible
+    - I am sad
+    - I don't feel very well
+    - I am disappointed
+    - super sad
+    - I'm so sad
+    - sad
+    - very sad
+    - unhappy
+    - not good
+    - not very good
+    - extremly sad
+    - so saad
+    - so sad
+
+- intent: tell_name
+  examples: |
+    - what is your name?
+    - what's your name?
+    - tell me your name
+    - what others call you
+    - what should i call you?
+    - how can i call you?
+
+
+- intent: bot_challenge
+  examples: |
+    - are you a bot?
+    - are you a human?
+    - am I talking to a bot?
+    - am I talking to a human?
+    - who are you?
+    - what are you doing?
+    - what can you doing?
+    - what's your job?
+    - what can you do?
+
+- intent: thanks
+  examples: |
+    - thank you
+    - thanks
+    - thank
+
+
+
+- intent: my_age
+  examples: |
+    - 77
+    - 89
+    - 40
+    - 23
+    - 18
+    - 56
+    - 66
+    - 60
+    - 34
+    - 31
+    - 30
+    - my age is 26
+    - my age is 45
+    - my age is 37
+    - my age is 19
+    - my age is 65
+    - my age is 76
+    - I have 46 years old
+    - I have 56 years old
+    - I have 27 years old
+    - 55
+    - 81
+    - 22
+    - 45
+    - 76
+    - 89
+    - 24 years
+    - 70 year
+    - 66 years
+    - 43 year
+    - 80 years
+    - 90 years
+    - 66 years
+    - 73 years
+    - 20 years
+    - 18 years
+    - 17 years
+    - 19 years
+    - 80 years
+    - 90 years
+    - 66 years
+    - 73 years
+    - 20 years
+    - 18 years
+    - 17 years
+    - 19 year
+    - 22 year
+    - 23 year
+    - 55 year
+    - 24 year
+    - 19 y
+    - 55 y
+    - 69 y
+    - 44 y
+    - 57 y
+    - 60 y
+    - 33 yo
+    - 78 yo
+    - 89 yo
+    - 47 yo
+    - 51 yo
+    - 31 yo
+
+
+- intent: my_weight
+  examples: |
+    - my weight is 50
+    - my weight is 66
+    - my weight is 37
+    - my weight is 45 kg
+    - my weight is 70 kg
+    - my weight is 123
+    - my weight is 145
+    - my weight is 111
+    - my weight is 134 kg
+    - 66
+    - 43
+    - 78
+    - 67
+    - 41
+    - 77
+    - 87 kg
+    - 144 kg
+    - 123 kg
+    - 150 kg
+    - 112 kg
+    - 130 kg
+    - 55 kg
+    - 43 kg
+    - 88 kg
+    - 76 kg
+    - 69 kg
+    - 50 kg
+    - 48 kg
+    - 87 kg
+    - 77 kg
+    - 45 kg
+    - 86 kg
+    - 73 kg
+    - 66 kg
+    - 77 kg
+    - 89 kg
+    - 91 kg
+    - 50 kg
+    - 88 kilo
+    - 57 kilo
+    - 49 kilo
+    - 90 kilo
+    - 120 kilos
+    - 76 kilos
+    - 71 kilos
+    - 77 kilograms
+    - 57 kilograms
+    - 68 kilograms
+    - 91 kilograms
+    - 110 kilograms
+    - 44 kilograms
+    - 68 kilograms
+
+
+- intent: my_height
+  examples: |
+    - my height is 150
+    - my height is 166
+    - my height is 137
+    - my height is 184
+    - my height is 187
+    - my height is 145 cm
+    - my height is 170 cm
+    - my height is 183
+    - my height is 165
+    - my height is 190
+    - my height is 134 cm
+    - 150
+    - 131
+    - 177
+    - 167
+    - 187 cm
+    - 144 cm
+    - 123 cm
+    - 134 cm
+    - 160 cm
+    - 177 cm
+    - 189 cm
+    - 168 cm
+    - 155 cm
+    - 200 cm
+    - 211 cm
+    - 166 cm
+    - 177 cm
+    - 155 cm
+    - 143 cm
+    - 203 cm
+    - 147 cm
+    - 168 cm
+    - 179 cm
+    - 200 cm
+    - 211 cm
+    - 166 cm
+    - 177 cm
+    - 155 cm
+    - 143 cm
+    - 203 cm
+    - 147 cm
+    - 168 cm
+    - 179 cm
+    - 200 cm
+    - 188 cm
+    - 175 cm
+    - 171 cm
+    - 152 cm
+    - 145 cm
+    - 207 cm
+    - 187 cm
+    - 188 cm
+    - 129 cm
+    - 220 cm
+    - 213 cm
+    - 168 cm
+    - 171 cm
+    - 151 cm
+    - 146 cm
+    - 206 cm
+    - 149 cm
+    - 161 cm
+    - 199 cm
+    - 189 centimes
+    - 155 centimes
+    - 200 centimes
+    - 154 centimes
+    - 182 centimes
+    - 186 centimes
+    - 191 centimes
+
+- intent: begin_analyse
+  examples: |
+    - Can you analyze me?
+    - Can we begin?
+    - I want to do the analyze
+    - I want to begin the analyze
+    - Can you see my weight?
+    - Can you analyze my weight?
+    - Can you analyze my size?
+    - Can you see my size?
+    - Can you recommend me a meal plan?
+    - Can you recommend me a good plan?
+    - Can you recommend me an optimal plan?
+    - Can you give me some recommendations?
+    - I want to do a diet
+    - I want to reduce my size
+    - I want to reduce my weight
+    - I want to optimize my weight
+    - I want to optimize my size
+    - let's begin
+    - Let's start
+    - start up
+    - launch
+    - let's start up
+    - let's launch
+    - open
+    - go
+    - let's go
+    - begin on
+    - commence
+    - let's commence
+
+
+
+- intent: out_of_scope
+  examples: |
+    - I want to order food
+    - What is 2 + 2?
+    - Who's the US President?
+

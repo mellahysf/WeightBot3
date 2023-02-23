@@ -1,0 +1,124 @@
+version: "2.0"
+
+stories:
+
+## en
+- story:  principal path en
+  steps:
+  - intent: greet_en
+  - action: utter_presentation_of_bot
+  - intent: affirm_en
+  - action: utter_asking_age
+  - intent: my_age
+  - action: action_save_age_ask_weight
+  - intent: my_weight
+  - action: action_save_weight_ask_height
+  - intent: my_height
+  - action: action_save_height
+  - action: utter_asking_gender
+  - intent: gender
+  - slot_was_set:
+      - gs
+  - action: action_save_gender
+  - action: utter_asking_effort
+  - intent: activity
+  - slot_was_set:
+      - as
+  - action: action_save_effort
+  - action: action_results
+  - action: utter_asking_showing_report
+  - intent: affirm_en
+  - action: action_meal_plan_rec
+  - action: action_restart
+
+- story: second principal path en
+  steps:
+  - intent: greet_en
+  - action: utter_presentation_of_bot
+  - intent: affirm_en
+  - action: utter_asking_age
+  - intent: my_age
+  - action: action_save_age_ask_weight
+  - intent: my_weight
+  - action: action_save_weight_ask_height
+  - intent: my_height
+  - action: action_save_height
+  - action: utter_asking_gender
+  - intent: gender
+  - slot_was_set:
+      - gs
+  - action: action_save_gender
+  - action: utter_asking_effort
+  - intent: activity
+  - slot_was_set:
+      - as
+  - action: action_save_effort
+  - action: action_results
+  - action: utter_asking_showing_report
+  - intent: deny
+  - action: utter_come_back_by_principal_path
+  - action: action_restart
+
+- story: second path en
+  steps:
+  - intent: greet_en
+  - action: utter_presentation_of_bot
+  - intent: deny
+  - action: utter_come_back_by_second_path
+  - action: action_restart
+
+
+- story:  principall path begin en
+  steps:
+  - intent: begin_analyse
+  - action: utter_asking_age
+  - intent: my_age
+  - action: action_save_age_ask_weight
+  - intent: my_weight
+  - action: action_save_weight_ask_height
+  - intent: my_height
+  - action: action_save_height
+  - action: utter_asking_gender
+  - intent: gender
+  - slot_was_set:
+      - gs
+  - action: action_save_gender
+  - action: utter_asking_effort
+  - intent: activity
+  - slot_was_set:
+      - as
+  - action: action_save_effort
+  - action: action_results
+  - action: utter_asking_showing_report
+  - intent: affirm_en
+  - action: action_meal_plan_rec
+  - action: action_restart
+
+- story: second principal path begin en
+  steps:
+  - intent: begin_analyse
+  - action: utter_asking_age
+  - intent: my_age
+  - action: action_save_age_ask_weight
+  - intent: my_weight
+  - action: action_save_weight_ask_height
+  - intent: my_height
+  - action: action_save_height
+  - action: utter_asking_gender
+  - intent: gender
+  - slot_was_set:
+      - gs
+  - action: action_save_gender
+  - action: utter_asking_effort
+  - intent: activity
+  - slot_was_set:
+      - as
+  - action: action_save_effort
+  - action: action_results
+  - action: utter_asking_showing_report
+  - intent: deny
+  - action: utter_come_back_by_principal_path
+  - action: action_restart
+
+
+

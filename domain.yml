@@ -1,0 +1,136 @@
+version: '2.0'
+config:
+  store_entities_as_slots: true
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
+intents:
+- greet_en:
+    use_entities: true
+- begin_analyse
+- okey
+- goodbye:
+    use_entities: true
+- affirm_en:
+    use_entities: true
+- deny:
+    use_entities: true
+- mood_great:
+    use_entities: true
+- mood_unhappy:
+    use_entities: true
+- bot_challenge:
+    use_entities: true
+- out_of_scope:
+    use_entities: true
+- my_age:
+    use_entities: true
+- my_weight:
+    use_entities: true
+- my_height:
+    use_entities: true
+- gender:
+    use_entities: true
+- nlu_fallback:
+    use_entities: true
+- tell_name:
+    use_entities: true
+- activity:
+    use_entities: true
+- thanks:
+    use_entities: true
+entities: []
+slots:
+  gs:
+    type: rasa.shared.core.slots.TextSlot
+    initial_value: null
+    auto_fill: true
+    influence_conversation: true
+  as:
+    type: rasa.shared.core.slots.TextSlot
+    initial_value: null
+    auto_fill: true
+    influence_conversation: true
+responses:
+  utter_greet:
+  - text: Hey! How are you?
+  utter_cheer_up:
+  - image: https://i.imgur.com/nGF1K8f.jpg
+    text: 'Here is something to cheer you up:'
+  utter_did_that_help:
+  - text: Did that help you?
+  utter_happy:
+  - text: Great, carry on!
+  utter_goodbye:
+  - text: Bye
+  utter_come_back_by_second_path:
+  - text: |-
+      Okay. see you again.
+      Good by 👋
+  utter_come_back_by_principal_path:
+  - text: |-
+      Okay, no problem. Come back to me anytime.
+      Goodbye 👋
+  utter_presentation_of_bot:
+  - text: |-
+      Hey👋. I hope you are doing well!! 🤗
+      Let me present myself:
+      I'm a professional coach for a healthy weight!
+      I can see if you have normal/ideal weight, then give you some meal plans to get your optimal size.
+      Can we begin our analysis?
+  utter_name:
+  - text: My name is WeightBot.
+  utter_greet_asking_name:
+  - text: Hey👋 what's your name?
+  utter_asking_age:
+  - text: Ok. Tell me pealse, how old are you?
+
+  #utter_asking_weight:
+  #- text: Perfet, and what's your actual weight in kg?
+  utter_asking_height:
+  - text: Ok. What's your height in cm please?
+  utter_asking_gender:
+  - buttons:
+    - payload: '/gender{"gs": "male"}'
+      title: Male
+    - payload: '/gender{"gs": "female"}'
+      title: Female
+    text: 'Very good. Tell me now, are you: '
+  utter_asking_effort:
+  - buttons:
+    - payload: '/activity{"as": "Little"}'
+      title: Little
+    - payload: '/activity{"as": "Light Active"}'
+      title: Light Active
+    - payload: '/activity{"as": "Moderately Active"}'
+      title: Moderately Active
+    - payload: '/activity{"as": "Very Active"}'
+      title: Very Active
+    - payload: '/activity{"as": "Super Active"}'
+      title: Super Active
+    text: "Okey. My last question for you is: What's your physical activity level?"
+  utter_asking_showing_report:
+  - text: "{msg} \n Do you want to have an optimal meal plan for you?"
+  utter_thanks:
+  - text: Thanks for providing the values.
+  utter_welcome:
+  - text: You'r welcome 😄
+  utter_details_thanks:
+  - text: Thanks for providing the given details
+  utter_iamabot:
+  - text: |-
+      I am a professional analyzer for the optimal weight!
+      I can see if you have normal/ideal weight, then give you some meal plans to get your optimal size.
+  utter_out_of_scope:
+  - text: Sorry, I didn't get what you said. Please rephrase what you said.
+actions:
+- action_save_age_ask_weight
+- action_save_weight_ask_height
+- action_save_height
+- action_save_gender
+- action_save_effort
+- action_meal_plan_rec
+- action_results
+#- action_restart
+forms: {}
+e2e_actions: []
